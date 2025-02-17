@@ -31,6 +31,7 @@ const Hero = () => {
               title="Check Out My Work"
               icon={<FaLocationArrow />}
               position="right"
+              handleClick={() => { console.log("Button clicked") }}
             />
           </a>
         </div>
