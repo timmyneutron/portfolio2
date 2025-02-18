@@ -2,7 +2,6 @@ import Grid from "@/components/grid";
 import Hero from "@/components/hero";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { navItems } from "@/data";
-import { nav } from "motion/react-client";
 
 export default function Home() {
   return (

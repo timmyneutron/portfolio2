@@ -1,4 +1,3 @@
-import { FaCss3, FaJs, FaReact } from "react-icons/fa6"
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid"
 import { gridItems } from "@/data"
 
