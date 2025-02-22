@@ -28,6 +28,7 @@ const Hero = () => {
           </p>
           <a href="#about">
             <MagicButton
+              handleClick={() => {}}
               title="Check Out My Work"
               icon={<FaLocationArrow />}
               position="right"
