@@ -1,4 +1,3 @@
-import test from "node:test"
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards"
 import { companies, testimonials } from "@/data"
 
@@ -18,11 +17,13 @@ const Clients = () => {
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
           {companies.map(({ id, img, name, nameImg }) => (
             <div key={id} className="flex md:max-w-60 max-w-32 gap-2">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={img}
                 alt={name}
                 className="w-5 md:w-10"
               />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={nameImg}
                 alt={name}

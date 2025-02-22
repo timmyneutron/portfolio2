@@ -25,7 +25,7 @@ export const InfiniteMovingCards = ({
 
   useEffect(() => {
     addAnimation();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
@@ -105,6 +105,7 @@ export const InfiniteMovingCards = ({
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
                   <div className="me-3">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src="/profile.svg"
                       alt="profile"

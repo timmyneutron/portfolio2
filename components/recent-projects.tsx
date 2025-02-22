@@ -16,8 +16,10 @@ const RecentProjects = () => {
             <PinContainer title={link} href={link}>
               <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden h-[30vh] sm:h-[40vh] lg:h-[30vh] mb-10">
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/bg.png" alt="bg-img" />
                 </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={img}
                   alt={title}
@@ -40,6 +42,7 @@ const RecentProjects = () => {
                         transform: `translateX(-${10 * index + 2}px)`,
                       }}
                     >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={icon} alt="icon5" className="p-2" />
                     </div>
                   ))}
