@@ -4,10 +4,8 @@ import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import { GridGlobe } from "./grid-globe";
 import { useState } from "react";
-import animationData from "@/data/confetti.json";
 import MagicButton from "./magic-button";
 import { IoCopyOutline } from "react-icons/io5";
-import dynamic from "next/dynamic";
 
 export const BentoGrid = ({
   className,
@@ -49,8 +47,6 @@ export const BentoGridItem = ({
   header?: React.ReactNode;
   icon?: React.ReactNode;
 }) => {
-  const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
-
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -131,18 +127,6 @@ export const BentoGridItem = ({
 
           {id === 6 && (
             <div className="mt-5 relative">
-              <div className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"}`}>
-                <Lottie
-                  options={{
-                    loop: copied,
-                    autoplay: copied,
-                    animationData: animationData,
-                    rendererSettings: {
-                      preserveAspectRatio: "xMidYMid slice",
-                    },
-                  }}
-                />
-              </div>
               <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
                 icon={<IoCopyOutline />}
