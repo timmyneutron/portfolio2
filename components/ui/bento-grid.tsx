@@ -3,11 +3,11 @@
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import { GridGlobe } from "./grid-globe";
-import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./magic-button";
 import { IoCopyOutline } from "react-icons/io5";
+import dynamic from "next/dynamic";
 
 export const BentoGrid = ({
   className,
@@ -49,6 +49,8 @@ export const BentoGridItem = ({
   header?: React.ReactNode;
   icon?: React.ReactNode;
 }) => {
+  const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
+
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
